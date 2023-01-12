@@ -1,3 +1,9 @@
+*  {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
@@ -22,9 +28,6 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -55,9 +58,8 @@ h6 {
   opacity: 1;
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+/* header */
+
 #header {
   position: fixed;
   top: 0;
@@ -68,7 +70,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background: #061153;
 }
 
 #header .profile img {
@@ -87,6 +89,11 @@ h6 {
   text-align-last: center;
   font-family: "Poppins", sans-serif;
 }
+
+ .mainContainer {
+  margin-top: -20px;
+  background-color: #030721;
+} 
 
 #header .profile h1 a,
 #header .profile h1 a:hover {
@@ -114,6 +121,7 @@ h6 {
   max-width: 220rem;
 }
 
+
 #header .profile .social-links a:hover {
   background: #149ddd;
   color: #fff;
@@ -134,6 +142,21 @@ h6 {
   }
 }
 
+.castleLogo {
+  width: 130px;
+  height: 86px;
+}
+
+.footerLogo {
+  width: 94px;
+  height: 48px;
+}
+
+.sidebarIcons {
+  width: 38px;
+  height: 36px;
+}
+
 .nav-menu {
   padding: 30px 0 0 0;
 }
@@ -142,11 +165,13 @@ h6 {
   margin: 0;
   padding: 0;
   list-style: none;
+  
 }
 
 .nav-menu>ul>li {
   position: relative;
   white-space: nowrap;
+  
 }
 
 .nav-menu a,
@@ -158,6 +183,9 @@ h6 {
   margin-bottom: 8px;
   transition: 0.3s;
   font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 225px;
 }
 
 .nav-menu a i,
@@ -179,7 +207,13 @@ h6 {
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #149ddd;
+  color: #FFFF;
+}
+
+.btn {
+  width: 15rem;
+  justify-content: space-around;
+  display: flex;
 }
 
 /* Mobile Navigation */
@@ -223,7 +257,7 @@ h6 {
 #hero {
   width: 100%;
   height: 70vh;
-  /* background: url("") top center; */
+  background: url(/assets/img/gameBanners/top.png) top center;
   background-color: #121212;
   background-size: cover;
   position: relative;
@@ -232,7 +266,6 @@ h6 {
 #hero:before {
   content: "";
   background: rgba(5, 13, 24, 0.3);
-  /* position: absolute; */
   bottom: 0;
   top: 0;
   left: 0;
@@ -241,6 +274,7 @@ h6 {
 }
 
 .buttonDefault {
+  list-style: none;
   background-color: #149ddd;
   align-items: center;
   text-align: center;
@@ -263,8 +297,21 @@ h6 {
 
 .buttonDefault:hover {
   background-color: #2eafec;
+  list-style: none;
 }
 
+@media (max-width: 768px) {
+  .buttonDefault {
+    margin: auto;
+    left: 30%;
+    bottom: 5%;
+  }
+}
+
+small {
+  width: 20rem;
+  height: 20rem;
+}
 
 #hero h1 {
   margin: 0 0 10px 0;
@@ -307,21 +354,21 @@ h6 {
   }
 }
 
+
 .bannerImg {
   width: 25rem;
   height: 25rem;
-  border-radius: 20px;
-  border: 2px solid #121212;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
 }
 
 .banners {
   max-width: 120rem;
   flex-wrap: wrap;
 }
+
+.row {
+ background-color: #26282B;
+}
+
 section {
   padding: 60px 0;
   overflow: hidden;
@@ -331,12 +378,92 @@ section {
   background: #f5f8fd;
 }
 
+.sectionAbt {
+  background-color: #030721;
+}
 
+.castleBanner {
+  width: 630px;
+  height: 507px;
+}
+
+.item {
+  height: 800px;
+  width: 1263px;
+}
+
+
+.carousel-indicators [data-bs-target] {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color:  #FFF;
+  background-clip: padding-box;
+  border: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: .5;
+  transition: opacity .6s ease;
+  border-radius: 50%;
+}
+
+.heroLabel {
+  margin-left: 40rem;
+}
+
+.heroImages {
+  display: flex;
+  justify-content: space-around;
+  width: 55%;
+  margin-left: 395px;
+}
+
+
+@media (max-width: 600px) {
+  .heroLabel {
+    margin: auto;
+    margin-top: 20px;
+  }
+  .heroImages {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  .partnersBanner {
+    width: 7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .hero1:nth-of-type(2) {
+    width: 18rem;
+  }
+  small {
+    display: none;
+  }
+}
+
+.videoSlider {
+  height: 800px;
+  width: 1263px;
+}
+.indicator {
+  width: 60px;
+}
 .section-title {
   padding-bottom: 30px;
-  max-width: 50rem;
+  max-width: 21rem;
   width: 100%;
   margin: auto;
+  align-items: center;
 }
 
 .section-title h2 {
@@ -366,7 +493,6 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* margin: auto; */
   display: flex;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -404,53 +530,6 @@ section {
 
 .about .content p:last-child {
   margin-bottom: 0;
-}
-.facts {
-  padding-bottom: 30px;
-}
-
-.facts .count-box {
-  padding: 30px;
-  width: 100%;
-}
-
-.facts .count-box i {
-  display: block;
-  font-size: 44px;
-  color: #149ddd;
-  float: left;
-  line-height: 0;
-}
-
-.facts .count-box span {
-  font-size: 48px;
-  line-height: 40px;
-  display: block;
-  font-weight: 700;
-  color: #050d18;
-  margin-left: 60px;
-}
-
-.facts .count-box p {
-  padding: 15px 0 0 0;
-  margin: 0 0 0 60px;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
-  color: #122f57;
-}
-
-.facts .count-box a {
-  font-weight: 600;
-  display: block;
-  margin-top: 20px;
-  color: #122f57;
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-  transition: ease-in-out 0.3s;
-}
-
-.facts .count-box a:hover {
-  color: #1f5297;
 }
 
 .breadcrumbs {
