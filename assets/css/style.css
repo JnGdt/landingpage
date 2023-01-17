@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'EntezareZohoor2';
+  src: url('/assets/img/fonts/aµå¸²°íµñ4.ttf'), url('/assets/img/fonts/aµå¸²°íµñ4.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *  {
   margin: 0%;
   padding: 0%;
@@ -70,8 +77,9 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #061153;
+  background-color: #030721 !important;
 }
+
 
 #header .profile img {
   margin: 15px auto;
@@ -165,7 +173,8 @@ h6 {
   margin: 0;
   padding: 0;
   list-style: none;
-  
+  font-weight: bolder;
+  font-family: "aµå¸²°íµñ4";
 }
 
 .nav-menu>ul>li {
@@ -257,7 +266,10 @@ h6 {
 #hero {
   width: 100%;
   height: 70vh;
-  background: url(/assets/img/gameBanners/top.png) top center;
+  /* background: url(/assets/img/gameBanners/top.jpg) center -445px; */
+  background: linear-gradient(0deg, rgba(0 0 0  / 54%), rgba(0 0 0 / 69%)), url(/assets/img/gameBanners/top.jpg) center center;
+background-repeat: no-repeat;
+background-size: cover;
   background-color: #121212;
   background-size: cover;
   position: relative;
@@ -271,6 +283,13 @@ h6 {
   left: 0;
   right: 0;
   z-index: 1;
+}
+
+.grandNew {
+  color: #34aae4;
+  font-weight: bold;
+  font-size: 48px;
+  margin-top: 34px;
 }
 
 .buttonDefault {
@@ -335,11 +354,11 @@ small {
   border-bottom: 3px solid #149ddd;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
   }
-}
+} */
 
 @media (max-width: 768px) {
   #hero h1 {
@@ -414,14 +433,14 @@ section {
 }
 
 .heroLabel {
-  margin-left: 40rem;
+  margin-left: 17rem;
 }
 
 .heroImages {
   display: flex;
   justify-content: space-around;
   width: 55%;
-  margin-left: 395px;
+  margin-left: 266px;
 }
 
 
@@ -436,7 +455,7 @@ section {
     margin: auto;
   }
   .partnersBanner {
-    width: 7rem;
+    width: 1rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -447,7 +466,8 @@ section {
     width: 18rem;
   }
   small {
-    display: none;
+    width: 22rem;
+    height: 5rem;
   }
 }
 
